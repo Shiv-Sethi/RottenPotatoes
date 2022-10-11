@@ -13,9 +13,9 @@ class MoviesController < ApplicationController
         @ratings_to_show = nil
       elsif params[:ratings] == nil and session[:ratings] != nil and params[:commit] == 'Refresh'
         @ratings_to_show = @all_ratings
-        redirect_to movies_path({:ratings => @ratings_to_show})
+        redirect_to movies_path({:ratings => @ratings_to_show, :title => session[:title], :release_date => session[:release_date], :sort_by => session[:sort_by]})
       elsif params[:ratings] == nil and session[:ratings] != nil and params[:commit] != 'Refresh'
-        redirect_to movies_path({:ratings => session[:ratings]})
+        redirect_to movies_path({:ratings => session[:ratings], :title => session[:title], :release_date => session[:release_date], :sort_by => session[:sort_by]})
         session.delete(:ratings)
       else
         @ratings_to_show = params[:ratings]
@@ -26,12 +26,17 @@ class MoviesController < ApplicationController
         @ratings_to_show = @ratings_to_show.keys
       end
       @movies = Movie.with_ratings(@ratings_to_show)
+ 
       if params[:title] == '1'
+        @hilite_t = 'bg-warning hilite'
         @sort_by = 'title'
         @movies = @movies.order(:title)
+        session[:title] = params[:title]
       elsif params[:release_date] == '1'
+        @hilite_r = 'bg-warning hilite'
         @sort_by = 'release_date'
-        @movies.order(:release_date)
+        @movies = @movies.order(:release_date)
+        session[:release_date] = params[:release_date]
       end
       session[:ratings] = @ratings_to_show 
       session[:sort_by] = @sort_by

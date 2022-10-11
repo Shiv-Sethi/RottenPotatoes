@@ -11,7 +11,10 @@ class MoviesController < ApplicationController
       @all_ratings = Movie.all_ratings
       if params[:ratings] == nil and session[:ratings] == nil
         @ratings_to_show = nil
-      elsif params[:ratings] == nil and session[:ratings] != nil
+      elsif params[:ratings] == nil and session[:ratings] != nil and params[:commit] == 'Refresh'
+        @ratings_to_show = @all_ratings
+        redirect_to movies_path({:ratings => @ratings_to_show})
+      elsif params[:ratings] == nil and session[:ratings] != nil and params[:commit] != 'Refresh'
         redirect_to movies_path({:ratings => session[:ratings]})
         session.delete(:ratings)
       else

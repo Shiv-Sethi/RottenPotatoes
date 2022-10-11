@@ -14683,3 +14683,262 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (10.4ms)
   Rendered layouts/_flash.erb (0.5ms)
 Completed 200 OK in 279ms (Views: 277.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:44 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:45 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G"]}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'
+  Rendered movies/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 274ms (Views: 272.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:46 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:46 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:46 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:48 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:49 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G"]}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:52 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?title=1" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:53 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"title"=>"1"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:53 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G", "PG", "PG-13", "R"]}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (1.4ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?release_date=1" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:55 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"release_date"=>"1"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:15:55 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G", "PG", "PG-13", "R"]}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:16:00 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?title=1" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:16:01 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"title"=>"1"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:16:01 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G"]}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?release_date=1" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:16:03 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"release_date"=>"1"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:16:03 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G"]}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:16:09 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:16:09 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G"]}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'
+  Rendered movies/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:25:26 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:25:27 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G"]}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:25:37 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:33:14 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:33:21 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:33:22 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G", "PG", "PG-13", "R"]}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:33:27 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:33:28 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:33:29 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G", "PG", "PG-13", "R"]}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?title=1" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:33:35 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"title"=>"1"}
+Redirected to https://spartatokyo-joshuaandy-3000.codio.io/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R" for 2607:f140:400:a008:293e:d5dd:b4a6:27e8 at 2022-10-11 02:33:36 +0000
+Cannot render console from 2607:f140:400:a008:293e:d5dd:b4a6:27e8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G", "PG", "PG-13", "R"]}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
